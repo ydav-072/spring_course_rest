@@ -50,6 +50,6 @@ public class MyConfig {
     public HibernateTransactionManager transactionManager(){
         HibernateTransactionManager hibernateTransactionManager = new HibernateTransactionManager();
         hibernateTransactionManager.setSessionFactory(sessionFactory().getObject());
-        return transactionManager();
+        return hibernateTransactionManager;
     }
 }
