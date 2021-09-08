@@ -34,6 +34,12 @@ public class MyRESTController {
         return employee;
     }
 
+    @PostMapping("/employees/add")
+    public Employee addNewEmployee(@RequestBody Employee employee){
+        employeeService.saveEmployee(employee);
+        return employee;
+    }
+
 //    @ExceptionHandler // EmployeeIncorrectData added in body response
 //    public ResponseEntity<EmployeeIncorrectData>handleException(
 //            NoSuchEmployeeException exception){
