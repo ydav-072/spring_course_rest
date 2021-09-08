@@ -34,20 +34,20 @@ public class MyRESTController {
         return employee;
     }
 
-    @ExceptionHandler // EmployeeIncorrectData added in body response
-    public ResponseEntity<EmployeeIncorrectData>handleException(
-            NoSuchEmployeeException exception){
-        EmployeeIncorrectData data = new EmployeeIncorrectData();
-        data.setInfo(exception.getMessage());
-        return new ResponseEntity<>(data, HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler // EmployeeIncorrectData added in body response
-    public ResponseEntity<EmployeeIncorrectData>handleException(
-            Exception exception){
-        EmployeeIncorrectData data = new EmployeeIncorrectData();
-        data.setInfo(exception.getMessage());
-        return new ResponseEntity<>(data, HttpStatus.BAD_REQUEST);
-    }
+//    @ExceptionHandler // EmployeeIncorrectData added in body response
+//    public ResponseEntity<EmployeeIncorrectData>handleException(
+//            NoSuchEmployeeException exception){
+//        EmployeeIncorrectData data = new EmployeeIncorrectData();
+//        data.setInfo(exception.getMessage());
+//        return new ResponseEntity<>(data, HttpStatus.NOT_FOUND);
+//    }
+//
+//    @ExceptionHandler // EmployeeIncorrectData added in body response
+//    public ResponseEntity<EmployeeIncorrectData>handleException(
+//            Exception exception){
+//        EmployeeIncorrectData data = new EmployeeIncorrectData();
+//        data.setInfo(exception.getMessage());
+//        return new ResponseEntity<>(data, HttpStatus.BAD_REQUEST);
+//    }
 
 }
