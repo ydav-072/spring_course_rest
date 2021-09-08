@@ -15,7 +15,7 @@ public class EmployeeGlobalExceptionHandling {
         return new ResponseEntity<>(data, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler // EmployeeIncorrectData added in body response
+    @ExceptionHandler // EmployeeIncorrectData added in body
     public ResponseEntity<EmployeeIncorrectData>handleException(
             Exception exception){
         EmployeeIncorrectData data = new EmployeeIncorrectData();
